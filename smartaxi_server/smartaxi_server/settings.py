@@ -2,6 +2,7 @@
 import dj_database_url
 import os
 
+#https://mike.tig.as/blog/2012/02/13/deploying-django-on-heroku/
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
