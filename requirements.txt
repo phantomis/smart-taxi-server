@@ -4,6 +4,7 @@ dj-database-url==0.2.1
 django-gcm==0.9.3
 django-selenium==0.9.6
 django-tastypie==0.9.15
+gevent==0.13.8
 mimeparse==0.1.3
 mock==1.0.1
 psycopg2==2.5
