@@ -183,15 +183,6 @@
         }
     },
     {
-        "pk": 10,
-        "model": "geolocation.clientlocation",
-        "fields": {
-            "latitude": "-33.0481825",
-            "longitude": "-71.42335909999997",
-            "address_name": "Los Araucanos 1825-1843, Quilpu\u00e9, Regi\u00f3n de Valpara\u00edso, Chile"
-        }
-    },
-    {
         "pk": 1,
         "model": "geolocation.client",
         "fields": {
@@ -204,7 +195,7 @@
         "pk": 2,
         "model": "geolocation.client",
         "fields": {
-            "phone_number": "phone_number 1",
+            "phone_number": "123456789",
             "name": "nombre 1",
             "location": 2
         }
@@ -213,7 +204,7 @@
         "pk": 3,
         "model": "geolocation.client",
         "fields": {
-            "phone_number": "phone_number 2",
+            "phone_number": "123456789",
             "name": "nombre 2",
             "location": 3
         }
@@ -222,7 +213,7 @@
         "pk": 4,
         "model": "geolocation.client",
         "fields": {
-            "phone_number": "phone_number 2",
+            "phone_number": "123456789",
             "name": "nombre 3",
             "location": 4
         }
@@ -231,7 +222,7 @@
         "pk": 5,
         "model": "geolocation.client",
         "fields": {
-            "phone_number": "phone_number 2",
+            "phone_number": "123456789",
             "name": "nombre 3",
             "location": 5
         }
@@ -240,7 +231,7 @@
         "pk": 6,
         "model": "geolocation.client",
         "fields": {
-            "phone_number": "phone_number 2",
+            "phone_number": "123456789",
             "name": "nombre 3",
             "location": 6
         }

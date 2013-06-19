@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.conf.urls import patterns, include, url
+from django.conf import settings
 from django.db import models
 from django.contrib import admin
 from tastypie.models import create_api_key,ApiKey
@@ -36,5 +37,10 @@ urlpatterns = patterns('',
     url(r'^api/', include(v1_api.urls)),
     url(r'^$', views.index, name='index'),
     url(r'', include('gcm.urls')),
+)
+
+urlpatterns += patterns('',
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
 

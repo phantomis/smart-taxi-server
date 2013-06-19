@@ -29,7 +29,7 @@ class Location(models.Model):
         return " %s (%s,%s) for user %s" % (self.id, self.latitude, self.longitude,self.user)
 
 class ClientLocation(models.Model):
-    address_name = models.CharField(u'Full Adress', max_length=60, blank=True, null= True)
+    address_name = models.CharField(u'Full Adress', max_length=200, blank=True, null= True)
     latitude = models.CharField(u'Latitude', max_length=25, blank=True, null=True)
     longitude = models.CharField(u'Longitude', max_length=25, blank=True, null=True)
 
