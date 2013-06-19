@@ -1,0 +1,1158 @@
+[
+    {
+        "pk": 15,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "device",
+            "name": "Device",
+            "app_label": "gcm"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "apiaccess",
+            "name": "api access",
+            "app_label": "tastypie"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "apikey",
+            "name": "api key",
+            "app_label": "tastypie"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "client",
+            "name": "client",
+            "app_label": "geolocation"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "clientlocation",
+            "name": "client location",
+            "app_label": "geolocation"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "contenttype",
+            "name": "content type",
+            "app_label": "contenttypes"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "group",
+            "name": "group",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "location",
+            "name": "location",
+            "app_label": "geolocation"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "logentry",
+            "name": "log entry",
+            "app_label": "admin"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "notification",
+            "name": "notification",
+            "app_label": "geolocation"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "permission",
+            "name": "permission",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "session",
+            "name": "session",
+            "app_label": "sessions"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "site",
+            "name": "site",
+            "app_label": "sites"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "taxi",
+            "name": "taxi",
+            "app_label": "geolocation"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "user",
+            "name": "user",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": "5e48cbf9966e0033335acaa3125295d4",
+        "model": "sessions.session",
+        "fields": {
+            "expire_date": "2013-06-19T01:23:34.248Z",
+            "session_data": "NTgxYjg2M2UzMjAyYTQ0MmZkZDdiMjE0M2IyMGM0ZjA3YzRlNWIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+        }
+    },
+    {
+        "pk": "9960ec98df9c8ad9281cf3be08075f81",
+        "model": "sessions.session",
+        "fields": {
+            "expire_date": "2013-06-20T04:44:01.253Z",
+            "session_data": "NTgxYjg2M2UzMjAyYTQ0MmZkZDdiMjE0M2IyMGM0ZjA3YzRlNWIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "77",
+            "longitude": "33",
+            "address_name": "Los mu\u00f1ones 321"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 1",
+            "longitude": "longitude 1",
+            "address_name": "address_name 1"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.049725",
+            "longitude": "-71.43109099999998",
+            "address_name": "Quilpu\u00e9, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0456858",
+            "longitude": "-71.60931260000001",
+            "address_name": "Yungay 2549, Valpara\u00edso, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0474126",
+            "longitude": "-71.61090560000002",
+            "address_name": "Pedro Montt, Valpara\u00edso, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0481825",
+            "longitude": "-71.42335909999997",
+            "address_name": "Los Araucanos 1825-1843, Quilpu\u00e9, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "91231231",
+            "name": "Juanito Correa",
+            "location": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 1",
+            "name": "nombre 1",
+            "location": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 2",
+            "location": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "96593178",
+            "name": "Rodrigo Amaro",
+            "location": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "81222376",
+            "name": "Fernanda Mattar",
+            "location": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "91211212",
+            "name": "Rodrigo Pereira",
+            "location": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "223123",
+            "name": "Rodrigo Amaro",
+            "location": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.notification",
+        "fields": {
+            "taxi": 1,
+            "timestamp": "2013-06-10T23:54:06.238Z",
+            "client": 1,
+            "status": "1"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_logentry",
+            "name": "Can add log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 20,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_logentry",
+            "name": "Can change log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 21,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_logentry",
+            "name": "Can delete log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_group",
+            "name": "Can add group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_group",
+            "name": "Can change group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_group",
+            "name": "Can delete group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_permission",
+            "name": "Can add permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_permission",
+            "name": "Can change permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_permission",
+            "name": "Can delete permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_user",
+            "name": "Can add user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_user",
+            "name": "Can change user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 9,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_user",
+            "name": "Can delete user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 10,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_contenttype",
+            "name": "Can add content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 11,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_contenttype",
+            "name": "Can change content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_contenttype",
+            "name": "Can delete content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 43,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_device",
+            "name": "Can add Device",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 44,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_device",
+            "name": "Can change Device",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 45,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_device",
+            "name": "Can delete Device",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 22,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_client",
+            "name": "Can add client",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 26,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_client",
+            "name": "Can change client",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 30,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_client",
+            "name": "Can delete client",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 23,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_clientlocation",
+            "name": "Can add client location",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 27,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_clientlocation",
+            "name": "Can change client location",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 31,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_clientlocation",
+            "name": "Can delete client location",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 24,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_location",
+            "name": "Can add location",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 28,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_location",
+            "name": "Can change location",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 32,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_location",
+            "name": "Can delete location",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 40,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_notification",
+            "name": "Can add notification",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 41,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_notification",
+            "name": "Can change notification",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 42,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_notification",
+            "name": "Can delete notification",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 25,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_taxi",
+            "name": "Can add taxi",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 29,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_taxi",
+            "name": "Can change taxi",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 33,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_taxi",
+            "name": "Can delete taxi",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 13,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_session",
+            "name": "Can add session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_session",
+            "name": "Can change session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 15,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_session",
+            "name": "Can delete session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 16,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_site",
+            "name": "Can add site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 17,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_site",
+            "name": "Can change site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_site",
+            "name": "Can delete site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 34,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_apiaccess",
+            "name": "Can add api access",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 36,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_apiaccess",
+            "name": "Can change api access",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 38,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_apiaccess",
+            "name": "Can delete api access",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 35,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_apikey",
+            "name": "Can add api key",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 37,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_apikey",
+            "name": "Can change api key",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 39,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_apikey",
+            "name": "Can delete api key",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "phantomis",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2013-06-02T05:58:50.968Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$4HZesSvLPLBK$P/OT6r34AOAhQN53fULyhUwfElAeAbNHOFB3FAGHTh0=",
+            "email": "phantomis@gmail.com",
+            "date_joined": "2013-01-15T20:58:02.037Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "rar",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": true,
+            "last_login": "2013-03-11T20:12:39.424Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$ocbyVF404Duj$yGJa1lBhumBCQ/OYbJlyc+L4gJf2SZk+a3tIHuwpEYY=",
+            "email": "",
+            "date_joined": "2013-03-11T20:11:28Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.user",
+        "fields": {
+            "username": "johndoe",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2013-06-02T06:00:57.984Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$eBJT9hLaEG8A$eq1gsiwFiVeYVNLwpjp4MJn9dbZlAVgv3UFtSycokFk=",
+            "email": "johndoe@example.com",
+            "date_joined": "2013-03-28T20:47:47.242Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.user",
+        "fields": {
+            "username": "jperez",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2013-03-28T20:47:47.379Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$Dnq3YQmSzEMS$ekQqYmCkvfnMf6RiWWd6wHPy4+bGxgFUYxHuUeX11eQ=",
+            "email": "jperez@example.com",
+            "date_joined": "2013-03-28T20:47:47.379Z"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-10T23:54:06.240Z",
+            "object_repr": "Notification object",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 17,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-10T00:41:11.868Z",
+            "object_repr": "Taxi AA3333 for user johndoe",
+            "object_id": "3",
+            "change_message": "Modificado/a status.",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 16,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-09T23:56:19.762Z",
+            "object_repr": "Taxi object",
+            "object_id": "4",
+            "change_message": "",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 15,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-09T23:56:12.461Z",
+            "object_repr": "Taxi object",
+            "object_id": "3",
+            "change_message": "",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 14,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-09T23:56:04.417Z",
+            "object_repr": "Taxi object",
+            "object_id": "2",
+            "change_message": "",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 13,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-09T23:55:54.719Z",
+            "object_repr": "Taxi object",
+            "object_id": "1",
+            "change_message": "Modificado/a user y license_plate.",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 12,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-09T23:55:39.264Z",
+            "object_repr": "Taxi object",
+            "object_id": "1",
+            "change_message": "Modificado/a user y license_plate.",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 11,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-09T23:55:30.387Z",
+            "object_repr": "Taxi object",
+            "object_id": "1",
+            "change_message": "Modificado/a user y license_plate.",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 10,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-09T23:55:25.764Z",
+            "object_repr": "Taxi object",
+            "object_id": "1",
+            "change_message": "Modificado/a user y license_plate.",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-09T23:55:17.572Z",
+            "object_repr": "Taxi object",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 8,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-06T04:59:55.747Z",
+            "object_repr": "(-33.0453809,-71.4588394) for user johndoe",
+            "object_id": "3",
+            "change_message": "Modificado/a latitude y longitude.",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 7,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-06T04:59:36.158Z",
+            "object_repr": "(-33.0224126,-71.5527166) for user rar",
+            "object_id": "2",
+            "change_message": "Modificado/a latitude y longitude.",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 6,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2013-06-06T04:59:18.744Z",
+            "object_repr": "(-33.046104,-71.39073689999998) for user phantomis",
+            "object_id": "1",
+            "change_message": "Modificado/a latitude y longitude.",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 5,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-06T04:47:06.014Z",
+            "object_repr": "(-71.45883939999999,-33.0453809) for user johndoe",
+            "object_id": "3",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 4,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-06T04:46:05.756Z",
+            "object_repr": "(-71.5527166,-33.0224126) for user rar",
+            "object_id": "2",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 3,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-06T04:45:20.465Z",
+            "object_repr": "(-71.39073689999998,-33.046104) for user phantomis",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 2,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-05T01:24:07.824Z",
+            "object_repr": "Client object",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 1,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2013-06-05T01:24:05.159Z",
+            "object_repr": "ClientLocation object",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 1,
+            "license_plate": "AA1111"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 2,
+            "license_plate": "AA2222"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "NA",
+            "user": 3,
+            "license_plate": "AA3333"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 4,
+            "license_plate": "AA4444"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.046104",
+            "timestamp": "2013-06-06T04:45:20.465Z",
+            "speed": "0",
+            "user": 1,
+            "longitude": "-71.39073689999998"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.0224126",
+            "timestamp": "2013-06-06T04:46:05.755Z",
+            "speed": "10",
+            "user": 2,
+            "longitude": "-71.5527166"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.0453809",
+            "timestamp": "2013-06-06T04:47:06.011Z",
+            "speed": "20",
+            "user": 3,
+            "longitude": "-71.4588394"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 2,
+            "key": "f8d338164f7529cb2eb0bde38afdeee537a29e12",
+            "created": "2013-03-11T20:11:28.903Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 3,
+            "key": "b0d0e53a64b5ad7c358a2dc89a56175b26464682",
+            "created": "2013-03-28T20:47:47.518Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 4,
+            "key": "05af03a5e80fa04cbe920990498496d68537e19c",
+            "created": "2013-03-28T20:47:47.524Z"
+        }
+    }
+]

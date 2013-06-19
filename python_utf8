@@ -1,0 +1,8 @@
+export LANG="es_CL.UTF-8"
+export LC_COLLATE="es_CL.UTF-8"
+export LC_CTYPE="es_CL.UTF-8"
+export LC_MESSAGES="es_CL.UTF-8"
+export LC_MONETARY="es_CL.UTF-8"
+export LC_NUMERIC="es_CL.UTF-8"
+export LC_TIME="es_CL.UTF-8"
+export LC_ALL="es_CL.UTF-8"

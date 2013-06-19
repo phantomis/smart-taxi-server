@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/API_DOC.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/static/js/mapa/client.class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/static/js/mapa/client.events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/static/js/mapa/mapa.class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/static/js/mapa/mapa.events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/serverapi/SmartTaxiAsync.java" afterPath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/serverapi/SmartTaxiAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TakeARide_Android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../TakeARide_Android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/LocationService.java" afterPath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/LocationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/LoginActivity.java" afterPath="$PROJECT_DIR$/../TakeARide_Android/src/com/rodrigoamaro/takearide/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geolocation/api.py" afterPath="$PROJECT_DIR$/geolocation/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geolocation/static/js/mapa/c-map.js" afterPath="$PROJECT_DIR$/geolocation/static/js/mapa/c-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.sqlite" afterPath="$PROJECT_DIR$/database.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/map.html" afterPath="$PROJECT_DIR$/templates/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geolocation/models.py" afterPath="$PROJECT_DIR$/geolocation/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartaxi_server/settings.py" afterPath="$PROJECT_DIR$/smartaxi_server/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/taxi.py" afterPath="$PROJECT_DIR$/tests/taxi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartaxi_server/urls.py" afterPath="$PROJECT_DIR$/smartaxi_server/urls.py" />
+    </list>
+    <ignored path="smartaxi_server.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371605663864" ignored="false" />
+    <file path="/settings.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1370908782399" ignored="false" />
+    <file path="/urls.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371357875890" ignored="false" />
+    <file path="/views.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1362694769422" ignored="false" />
+    <file path="/master_story" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1362625701272" ignored="false" />
+    <file path="/map.html" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371351535544" ignored="false" />
+    <file path="/api.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371606147379" ignored="false" />
+    <file path="/models.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371523940363" ignored="false" />
+    <file path="$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/django/contrib/auth/models.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1363897667813" ignored="false" />
+    <file path="$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/django/test/testcases.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1363897667813" ignored="false" />
+    <file path="$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/django/utils/autoreload.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1363897667813" ignored="false" />
+    <file path="$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/django/db/models/base.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1363897667813" ignored="false" />
+    <file path="/add_locations.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1364504092095" ignored="false" />
+    <file path="/taxi.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371521060114" ignored="false" />
+    <file path="/Django Console" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371336583103" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1370152309502" ignored="false" />
+    <file path="/c-map.js" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371525363474" ignored="false" />
+    <file path="/fragment.js2" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371347374154" ignored="false" />
+    <file path="/client.class.js" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371346742213" ignored="false" />
+    <file path="/client.events.js" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371346862125" ignored="false" />
+    <file path="/mapa.class.js" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371351472266" ignored="false" />
+    <file path="/mapa.events.js" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371351232767" ignored="false" />
+    <file path="/API_DOC.rst" changelist="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" time="1371607170288" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/smartaxi_server$Test__geolocation.coverage" NAME="Test: geolocation Coverage Results" MODIFIED="1362611901788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="smartaxi_server" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="c-map.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/c-map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="68" selection-start="2640" selection-end="2640" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="taxi.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/taxi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/map.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="0" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geolocation/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="API_DOC.rst" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geolocation/API_DOC.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.32019705">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resources.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/tastypie/resources.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2197" column="19" selection-start="83987" selection-end="83987" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geolocation/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="11" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_user.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geolocation/fixtures/admin_user.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartaxi_server/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="34" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initial_data.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/initial_data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="6" selection-start="3098" selection-end="3099" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/fixtures" />
+        <option value="$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/tastypie/fields.py" />
+        <option value="$PROJECT_DIR$/a.json" />
+        <option value="$PROJECT_DIR$/initial_data.json" />
+        <option value="$PROJECT_DIR$/geolocation/static/js/mapa/client.events.js" />
+        <option value="$PROJECT_DIR$/geolocation/static/js/mapa/client.class.js" />
+        <option value="$PROJECT_DIR$/geolocation/static/js/mapa/mapa.events.js" />
+        <option value="$PROJECT_DIR$/geolocation/static/js/mapa/mapa.class.js" />
+        <option value="$PROJECT_DIR$/templates/map.html" />
+        <option value="$PROJECT_DIR$/smartaxi_server/urls.py" />
+        <option value="$PROJECT_DIR$/smartaxi_server/settings.py" />
+        <option value="$PROJECT_DIR$/tests/taxi.py" />
+        <option value="$PROJECT_DIR$/geolocation/static/js/mapa/c-map.js" />
+        <option value="$PROJECT_DIR$/geolocation/models.py" />
+        <option value="$PROJECT_DIR$/geolocation/api.py" />
+        <option value="$PROJECT_DIR$/geolocation/API_DOC.rst" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="62" />
+    <option name="y" value="22" />
+    <option name="width" value="1218" />
+    <option name="height" value="778" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartaxi_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartaxi_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartaxi_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartaxi_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartaxi_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolocation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="98" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="100" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="109" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="899" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="897" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="105" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="101" />
+    <property name="Database.TableEditor.Splitter" value="0.90000004" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="reference.idesettings.debugger.python" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geolocation/static/js/mapa" />
+      <recent name="$PROJECT_DIR$/geolocation" />
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geolocation/static/img" />
+      <recent name="$PROJECT_DIR$/geolocation/management/commands" />
+      <recent name="$PROJECT_DIR$/geolocation/static" />
+      <recent name="$PROJECT_DIR$/geolocation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.smartaxi_server">
+    <configuration default="false" name="Test: fts" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="fts" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="smartaxi_server" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="smartaxi_server.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8080" />
+      <option name="host" value="192.168.0.103" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: geolocation" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smartaxi_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="geolocation" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonCover" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonCover" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Django server.smartaxi_server" />
+      <item index="1" class="java.lang.String" itemvalue="Django tests.Test: geolocation" />
+      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: fts" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: fts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48a6fe0f-e0e6-4588-bca9-e6924f0baa59" name="Default" comment="" />
+      <created>1346977116179</created>
+      <updated>1346977116179</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="62" y="22" width="1218" height="778" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6318182" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6720588" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28525123" sideWeight="0.34175083" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27986348" sideWeight="0.36818182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39342266" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2893773" sideWeight="0.5008104" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3060606" sideWeight="0.49918962" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6735294" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989899" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/geolocation/tests/api.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/geolocation/tests/api.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="45" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/tastypie/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="685" column="16" selection-start="25050" selection-end="25060" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/client.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="0" selection-end="1574" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/mapa.events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="3" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/mapa.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="20" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/client.events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.1724138" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartaxi_server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.19704433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/static/js/mapa/c-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="68" selection-start="2640" selection-end="2640" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenvs/django-memoria/lib/python2.7/site-packages/tastypie/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2197" column="19" selection-start="83987" selection-end="83987" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/fixtures/admin_user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartaxi_server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="34" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/initial_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="6" selection-start="3098" selection-end="3099" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/taxi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geolocation/API_DOC.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.32019705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

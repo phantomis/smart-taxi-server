@@ -1,0 +1,58 @@
+http://pastebin.com/XNLxNbTs
+http://williamjohnbert.com/2011/07/how-to-unit-testing-in-django-with-mocking-and-patching/
+https://github.com/toastdriven/django-tastypie/blob/master/tastypie/test.py
+http://django-tastypie.readthedocs.org/en/latest/testing.html
+
+http://blog.beyondfog.com/7-tips-on-heroku-testing-and-more-for-python-django-from-a-ruby-on-rails-developer/#.UTkXftGu_NU
+http://matthewphiong.com/managing-django-static-files-on-heroku
+http://marionettejs.com/
+https://github.com/eschwartz/backbone.googlemaps
+https://github.com/gsmaverick/backbone.mapview
+http://www.natehunzaker.com/2011/11/02/learning-backbonejs-chapter-1-a-quick-overview/
+https://github.com/hepochen/tastypie-user
+https://dev.twitter.com/docs/api/1.
+https://github.com/bogdal/django-gcm/
+
+
+- Debe proveer de login seguro mediante un api key Ok
+- El usuario esta asociado a un Taxi OK
+- Se debe poder capturar la posicion geográfica del taxi a partir de un webservice OK
+- El taxi posee patente y estado (disponible, no disponible, ausente) OK
+- Se deben poder obtener todas las posiciones de los vehiculos
+- Se debe poder filtrar estas posiciones por las ultimas de cada uno
+- Se debe poder setear el estado del taxi via rest
+
+
+WEB:
+- Via web se debe poder guardar clientes/pasajeros (nombre, telefono)
+- Se debe poder enviar la posicion del cliente y retornar los vehiculos cercanos a este
+- Se debe poder mostrar la posicion de TODOS los vehiculos con su estado
+- Via web se debe poder guardar una carrera asociada al cliente
+- Se debe enviar un mensaje a los taxis cercanos para  agendar una peticion (c2dm)
+- Un taxi puede aceptar la peticion y quedara con la carrera asignada
+
+
+
+Api definition
+    GET   account/login
+        No Auth
+        Parameters :user , md5(password)
+        Return : {ApiKey : '123455677898 '}
+
+    PUT    locations/my_location
+        Auth
+        Parameters: lat, long , speed
+        Return: {Confirm}
+
+
+    GET    account/profile
+        Auth
+        Parameters:
+        Return : {Datos del usuario}
+
+    GET    locations/global_locations
+        No Auth
+        Parameters:
+        Return : [ mapa de ubicaciones]
+
+

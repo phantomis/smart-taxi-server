@@ -1,0 +1,353 @@
+[
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "phantomis",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2013-06-02T05:58:50.968Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$4HZesSvLPLBK$P/OT6r34AOAhQN53fULyhUwfElAeAbNHOFB3FAGHTh0=",
+            "email": "phantomis@gmail.com",
+            "date_joined": "2013-01-15T20:58:02.037Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "rar",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": true,
+            "last_login": "2013-03-11T20:12:39.424Z",
+            "groups": [
+                1
+            ],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$ocbyVF404Duj$yGJa1lBhumBCQ/OYbJlyc+L4gJf2SZk+a3tIHuwpEYY=",
+            "email": "",
+            "date_joined": "2013-03-11T20:11:28Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.user",
+        "fields": {
+            "username": "johndoe",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2013-06-02T06:00:57.984Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$eBJT9hLaEG8A$eq1gsiwFiVeYVNLwpjp4MJn9dbZlAVgv3UFtSycokFk=",
+            "email": "johndoe@example.com",
+            "date_joined": "2013-03-28T20:47:47.242Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.user",
+        "fields": {
+            "username": "jperez",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2013-03-28T20:47:47.379Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$Dnq3YQmSzEMS$ekQqYmCkvfnMf6RiWWd6wHPy4+bGxgFUYxHuUeX11eQ=",
+            "email": "jperez@example.com",
+            "date_joined": "2013-03-28T20:47:47.379Z"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 2,
+            "key": "f8d338164f7529cb2eb0bde38afdeee537a29e12",
+            "created": "2013-03-11T20:11:28.903Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 3,
+            "key": "b0d0e53a64b5ad7c358a2dc89a56175b26464682",
+            "created": "2013-03-28T20:47:47.518Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tastypie.apikey",
+        "fields": {
+            "user": 4,
+            "key": "05af03a5e80fa04cbe920990498496d68537e19c",
+            "created": "2013-03-28T20:47:47.524Z"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "77",
+            "longitude": "33",
+            "address_name": "Los mu\u00f1ones 321"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 1",
+            "longitude": "longitude 1",
+            "address_name": "address_name 1"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "latitude 2",
+            "longitude": "longitude 2",
+            "address_name": "address_name 2"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.049725",
+            "longitude": "-71.43109099999998",
+            "address_name": "Quilpu\u00e9, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0456858",
+            "longitude": "-71.60931260000001",
+            "address_name": "Yungay 2549, Valpara\u00edso, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0474126",
+            "longitude": "-71.61090560000002",
+            "address_name": "Pedro Montt, Valpara\u00edso, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "geolocation.clientlocation",
+        "fields": {
+            "latitude": "-33.0481825",
+            "longitude": "-71.42335909999997",
+            "address_name": "Los Araucanos 1825-1843, Quilpu\u00e9, Regi\u00f3n de Valpara\u00edso, Chile"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "91231231",
+            "name": "Juanito Correa",
+            "location": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 1",
+            "name": "nombre 1",
+            "location": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 2",
+            "location": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "phone_number 2",
+            "name": "nombre 3",
+            "location": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "96593178",
+            "name": "Rodrigo Amaro",
+            "location": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "81222376",
+            "name": "Fernanda Mattar",
+            "location": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "91211212",
+            "name": "Rodrigo Pereira",
+            "location": 9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "geolocation.client",
+        "fields": {
+            "phone_number": "223123",
+            "name": "Rodrigo Amaro",
+            "location": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 1,
+            "license_plate": "AA1111"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 2,
+            "license_plate": "AA2222"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "NA",
+            "user": 3,
+            "license_plate": "AA3333"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "geolocation.taxi",
+        "fields": {
+            "status": "Av",
+            "user": 4,
+            "license_plate": "AA4444"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.046104",
+            "timestamp": "2013-06-06T04:45:20.465Z",
+            "speed": "0",
+            "user": 1,
+            "longitude": "-71.39073689999998"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.0224126",
+            "timestamp": "2013-06-06T04:46:05.755Z",
+            "speed": "10",
+            "user": 2,
+            "longitude": "-71.5527166"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "geolocation.location",
+        "fields": {
+            "latitude": "-33.0453809",
+            "timestamp": "2013-06-06T04:47:06.011Z",
+            "speed": "20",
+            "user": 3,
+            "longitude": "-71.4588394"
+        }
+    }
+]

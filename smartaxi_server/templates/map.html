@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SmartTaxi</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <style type="text/css">
+        body {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            padding-top: 50px;
+        }
+
+        #map-canvas img {
+            max-width: none;
+            width: auto;
+            display: inline;
+        }
+
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% load staticfiles %}
+    <script language="javascript">var STATIC_URL = "{% static "" %}";</script>
+    <!-- Styles -->
+    <link href="{% static  "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static  "css/bootstrap-responsive.min.css" %}" rel="stylesheet">
+    <link href="{% static  "css/style.css" %}" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="{% static  "js/libs/jquery.js" %}"></script>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBG48aUbx4ysaS6QbusZ84gdszuFlm8RTE&sensor=false">
+    </script>
+    <script src="{% static  "js/mapa/c-map.js" %}"></script>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">SmartTaxi</a>
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">Mapa</a>
+                </li>
+                <li><a href="#">unused</a></li>
+                <li><a href="#">unused</a></li>
+            </ul>
+            <ul class="nav pull-right">
+                <li><a href="#">Bienvenido <strong>operador</strong></a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="page-header">
+        <h1>Mapa de taxis
+            <small>Mapa de todos los taxis en el sector</small>
+        </h1>
+    </div>
+</section>
+<div class="container">
+    <div class="row-fluid">
+        <div class="span4">
+            <h3>Datos del cliente</h3>
+
+            <div class="well">
+                <label>Nombre del cliente</label>
+                <input id="client_name" type="text" class="span12" placeholder="Rodrigo Amaro" value="Rodrigo Amaro">
+                <label>Numero de teléfono</label>
+
+                <div class="input-prepend">
+                    <span class="add-on">+56 9</span>
+                    <input id="client_phone" class="span12" type="text" placeholder="96593178">
+                </div>
+                <label>Dirección de origen</label>
+                <input id="client_address" type="text" class="span12" placeholder="Alicante 116, Quilpue"
+                       value="Alicante 116, Quilpue">
+
+                <div class="inline">
+                    <label for="radious_map">Radio de cobertura</label>
+                    <input type="text" id="radious_map" value="5">
+                </div>
+                <button class="btn" id="search_location">Buscar en mapa</button>
+                <button class="btn" id="get_near_taxis" disabled="disabled">Buscar taxis cercanos</button>
+                <div id="location_box" style="display: none">
+                    <strong>Quisiste decir: </strong>
+
+                    <div id="location_results"></div>
+
+                </div>
+            </div>
+            <div class="well">
+                <p id="client_data"> </p>
+            </div>
+            <div class="well">
+                <table id="taxis-table" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Patente</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+
+                </table>
+                <button class="btn" id="send_location">Notificar a vehiculos cercanos</button>
+            </div>
+
+            <div class="alert">
+                <button class="close" data-dismiss="alert">×</button>
+                <strong> Rayos!</strong> No se encuentran taxis disponibles.
+            </div>
+        </div>
+        <!-- Google Maps Control -->
+        <div class="span8">
+            <div id="map-canvas"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!--script type="text/template" id="marker_template">
+<% _.each(markers, function (mark) { %>
+  <li><%= mark.get('latitude') %> , <%= mark.get('longitude') %></li> 
+  <% }); %>
+</script-->
+</html>
