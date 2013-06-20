@@ -3,6 +3,7 @@ import dj_database_url
 import os
 
 #https://mike.tig.as/blog/2012/02/13/deploying-django-on-heroku/
+#http://matthewphiong.com/managing-django-static-files-on-heroku
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
@@ -28,8 +29,8 @@ DATABASES = {
     }
 }
 
-print dj_database_url.config();
-DATABASES['default'] =  dj_database_url.config()
+#print dj_database_url.config();
+#DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -70,7 +71,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'staticfiles')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -81,7 +82,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/phantomis/Memoria/smart-taxi-server/smartaxi_server/smartaxi_server/static',
+    os.path.join(PROJECT_PATH, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -121,10 +122,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_PATH, '../templates'),
+    os.path.join(PROJECT_PATH, 'templates'),
 )
-
-print os.path.join(PROJECT_PATH, '../templates')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -138,9 +137,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'geolocation',
-    'fts',
     'tastypie',
     'gcm',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
