@@ -15,8 +15,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.paginator import Paginator, InvalidPage
 from django.http import Http404
 from pprint import pprint
-from django.db.models import Q
-from tastypie.bundle import Bundle
+from tastypie import http
 
 from geolocation.models import Location, Client, ClientLocation, Taxi, Notification
 
@@ -48,7 +47,7 @@ class ApiTokenResource(ModelResource):
 
 
 class AccountResource(ModelResource):
-    taxi = fields.ToOneField('geolocation.api.TaxiResource', 'taxi', full=True)
+    taxi = fields.ToOneField('geolocation.api.TaxiResource', 'taxi', full=True, null=True)
 
     class Meta:
         queryset = User.objects.all()
@@ -56,58 +55,26 @@ class AccountResource(ModelResource):
         excludes = ['email', 'password', 'is_superuser']
         authorization = Authorization()
         authentication = ApiKeyAuthentication()
-        list_allowed_methods = ['post', 'get']
+        list_allowed_methods = ['get']
         filtering = {"username": ALL}
 
-    def override_urls(self):
-        return [
-            url(r"^(?P<resource_name>%s)/login%s$" %
-                (self._meta.resource_name, trailing_slash()),
-                self.wrap_view('login'), name="api_login"),
-            #url(r'^(?P<resource_name>%s)/logout%s$' %
-            #    (self._meta.resource_name, trailing_slash()),
-            #    self.wrap_view('logout'), name='api_logout'),
-        ]
+class PushAuthorization(Authorization):
 
-    def login(self, request, **kwargs):
-        self.method_check(request, allowed=['post'])
+    def create_list(self, object_list, bundle):
+        return bundle.obj.user == bundle.request.user
 
-        data = self.deserialize(request, request.raw_post_data,
-                                format=request.META.get('CONTENT_TYPE', 'application/json'))
 
-        username = data.get('username', '')
-        password = data.get('password', '')
-        dev_id = data.get('dev_id', '')
-        reg_id = data.get('reg_id', '')
+    def update_detail(self, object_list, bundle):
+        return bundle.obj.user == bundle.request.user
 
-        user = authenticate(username=username, password=password)
-        if user:
-            if user.is_active:
-                login(request, user)
-                if dev_id != '' and reg_id != '':
-                    device, created = Device.objects.get_or_create(dev_id=dev_id, reg_id=reg_id, is_active=True)
-                    try:
-                        taxi = Taxi.objects.get(user=user)
-                        taxi.device = device
-                        device.save()
-                        taxi.save()
-                    except ObjectDoesNotExist:
-                        pass
 
-                return self.create_response(request, {
-                    'success': True,
-                    'api_key': user.api_key.key
-                })
-            else:
-                return self.create_response(request, {
-                    'success': False,
-                    'reason': 'disabled',
-                }, HttpForbidden)
-        else:
-            return self.create_response(request, {
-                'success': False,
-                'reason': 'incorrect',
-            }, HttpUnauthorized)
+class PushResource(ModelResource):
+    class Meta:
+        queryset = Device.objects.all()
+        authorization = PushAuthorization()
+        authentication = ApiKeyAuthentication()
+        list_allowed_methods = ["post", "get"]
+        detail_allowed_methods = ["put"]
 
 
 class TaxiAuthorization(Authorization):
@@ -116,11 +83,42 @@ class TaxiAuthorization(Authorization):
 
 
 class TaxiResource(ModelResource):
+    #device = fields.ToOneField('geolocation.api.PushResource', 'device', full=True, null=True)
     class Meta:
         queryset = Taxi.objects.all()
         authorization = TaxiAuthorization()
         authentication = ApiKeyAuthentication()
         allowed_methods = ['post', 'put', 'get']
+
+    def prepend_urls(self):
+        return [
+            url(r'^(?P<resource_name>%s)/(?P<pk>\w[\w/-]*)/device%s$' % (
+                self._meta.resource_name, trailing_slash()),
+                self.wrap_view('dispatch_device'),
+                name='api_taxi_device'),
+        ]
+
+    def dispatch_device(self, request, **kwargs):
+        self.method_check(request, allowed=['post','put'])
+        print request.body
+        data = self.deserialize(request, request.body,format=request.META.get('CONTENT_TYPE', 'application/json'))
+        print data
+        dev_id = data.get('dev_id', '')
+        reg_id = data.get('reg_id', '')
+        if dev_id and reg_id:
+            device, created = Device.objects.get_or_create(dev_id=dev_id, reg_id=reg_id, is_active=True)
+            try:
+                taxi = Taxi.objects.get(user=request.user)
+                print taxi
+                taxi.device = device
+                device.save()
+                taxi.save()
+            except ObjectDoesNotExist:
+                pass
+            return self.create_response(request, {}, http.HttpCreated)
+
+        return self.error_response(request, data, response_class=http.HttpBadRequest)
+
 
 
 """
@@ -167,7 +165,7 @@ class LocationResource(ModelResource):
 
         return orm_filters
 
-    def override_urls(self):
+    def prepend_urls(self):
         return [
             url(r"^(?P<resource_name>%s)/search%s$" % (self._meta.resource_name, trailing_slash()),
                 self.wrap_view('do_search'), name="api_search"),

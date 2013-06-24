@@ -1,10 +1,14 @@
 import time
 import sys
 
-server = 'http://192.168.0.103:8080/'
+server = 'http://0.0.0.0:5000/'
 location_url = 'api/v1/location/?format=json'
 users = [
     {
+        "name" : "phantomis",
+        "api_key" : "2f195a7d12ad9d3a5a566e70488b00d7e0f5a629",
+        "step" : -0.001
+    },{
         "name" : "johndoe",
         "api_key" : "b0d0e53a64b5ad7c358a2dc89a56175b26464682",
         "step" : -0.001

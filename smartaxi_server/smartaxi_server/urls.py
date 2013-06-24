@@ -5,7 +5,7 @@ from django.db import models
 from django.contrib import admin
 from tastypie.models import create_api_key,ApiKey
 from tastypie.api import Api
-from geolocation.api import AccountResource, LocationResource, ClientResource, NotificationResource,TaxiResource, ApiTokenResource
+from geolocation.api import AccountResource, LocationResource, ClientResource, NotificationResource,TaxiResource, ApiTokenResource, PushResource
 from geolocation import views
 from geolocation.models import Location, Client, Taxi, ClientLocation,Notification, send_notification
 from gcm.models import Device
@@ -30,6 +30,7 @@ v1_api.register(ClientResource())
 v1_api.register(NotificationResource())
 v1_api.register(TaxiResource())
 v1_api.register(ApiTokenResource())
+v1_api.register(PushResource())
 
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
