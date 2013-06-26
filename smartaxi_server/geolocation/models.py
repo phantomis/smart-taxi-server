@@ -14,7 +14,7 @@ class Taxi(models.Model):
     user = models.OneToOneField(User)
     license_plate = models.TextField(u'Licence Plate',max_length=6,blank=True,null=True)
     status = models.CharField(u'Status',max_length=2,choices=STATUS_CHOICES)
-    device = models.OneToOneField(Device, null=True)
+    device = models.OneToOneField(Device, blank=True, null=True)
     def __unicode__(self):
         return "Taxi %s for user %s" % (self.license_plate,self.user)
 

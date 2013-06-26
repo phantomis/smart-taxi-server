@@ -81,6 +81,9 @@ class TaxiAuthorization(Authorization):
     def update_detail(self, object_list, bundle):
         return bundle.obj.user == bundle.request.user
 
+    def read_list(self, object_list, bundle):
+        return object_list.filter(user=bundle.request.user)
+
 
 class TaxiResource(ModelResource):
     #device = fields.ToOneField('geolocation.api.PushResource', 'device', full=True, null=True)
@@ -106,10 +109,11 @@ class TaxiResource(ModelResource):
         dev_id = data.get('dev_id', '')
         reg_id = data.get('reg_id', '')
         if dev_id and reg_id:
-            device, created = Device.objects.get_or_create(dev_id=dev_id, reg_id=reg_id, is_active=True)
+            device, created = Device.objects.get_or_create(dev_id=dev_id, is_active=True)
             try:
+                device.reg_id=reg_id
+                device.save()
                 taxi = Taxi.objects.get(user=request.user)
-                print taxi
                 taxi.device = device
                 device.save()
                 taxi.save()
