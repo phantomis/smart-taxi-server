@@ -10,6 +10,7 @@ class Taxi(models.Model):
         ('1', 'Available'),
         ('2', 'Not Available'),
         ('3', 'Away'),
+        ('3', 'Working'),
     )
     user = models.OneToOneField(User)
     license_plate = models.TextField(u'Licence Plate',max_length=6,blank=True,null=True)
@@ -53,6 +54,7 @@ class Notification(models.Model):
         ('4', 'Rejected'),
     )
     client = models.ForeignKey(Client)
+
     taxi = models.ForeignKey(Taxi)
     timestamp = models.DateTimeField(auto_now_add=True)
     status = models.CharField(u'Status',max_length=2,choices=STATUS_CHOICES, default='1')
@@ -61,12 +63,29 @@ class Notification(models.Model):
         return u"  %s in %s ( %s ) " % ( self.client.name, self.taxi, self.status)
 
 
-from pprint import pprint
+from django.core import serializers
 def send_notification(sender, **kwargs):
         """
         Señal que manda el mensaje automaticamente se guarda un item en el modelo Notification
         """
         if kwargs.get('created') is True:
-            pprint(kwargs)
             notif = kwargs.get("instance")
-            notif.taxi.device.send_message("mensaje")
+            if notif.taxi.device:
+                if notif.status == "1":
+                    notif.status = "2"
+                    notif.save()
+                    notif.taxi.device.send_message(serializers.serialize("json", [notif]))
+
+        else:
+            notif = kwargs.get("instance")
+            #Alguien respondio mensaje
+            if notif.status == "3":
+                #Obtenemos las notificaciones del mismo cliente, salvo la que estamos aceptando
+                to_notify = Notification.objects.filter(client=notif.client).exclude(id=notif.id)
+                for notify_to_discard in to_notify:
+                    #solo si fue un mensaje mandado y tiene asociado un dispositivo
+                    if notify_to_discard.status == "2" and notify_to_discard.taxi.device:
+                        notify_to_discard.taxi.device.send_message("carrera ya tomada")
+                    notify_to_discard.delete()
+                #seteamos el taxi que respondio con un estado de "working"
+                notif.taxi.status = "4"

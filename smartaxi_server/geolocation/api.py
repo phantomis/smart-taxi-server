@@ -92,6 +92,7 @@ class TaxiResource(ModelResource):
         authorization = TaxiAuthorization()
         authentication = ApiKeyAuthentication()
         allowed_methods = ['post', 'put', 'get']
+        filtering = {"id": ALL}
 
     def prepend_urls(self):
         return [
@@ -133,13 +134,11 @@ class TaxiResource(ModelResource):
 
 
 class LocationResource(ModelResource):
-    user = fields.ForeignKey(AccountResource, 'user', full=True)
 
     class Meta:
         queryset = Location.objects.all().order_by('-id')
         resource_name = 'location'
-        #excludes = ['id',]
-        list_allowed_methods = ['post', 'get']
+        allowed_methods = ['post']
         authentication = ApiKeyAuthentication()
         authorization = Authorization()
         filtering = {'user': ALL_WITH_RELATIONS}
@@ -151,14 +150,21 @@ class LocationResource(ModelResource):
     def apply_authorization_limits(self, request, object_list):
         return object_list.filter(user=request.user)
 
-    def dehydrate(self, bundle):
-        return bundle
+
+class MapaResource(ModelResource):
+    user = fields.ForeignKey(AccountResource, 'user', full=True)
+    class Meta:
+        queryset = Location.objects.all().order_by('-id')
+        resource_name = 'mapa'
+        allowed_methods = ['get']
+        authorization = Authorization()
+        filtering = {'user': ALL_WITH_RELATIONS}
 
     def build_filters(self, filters=None):
         if filters is None: #if you don't pass any filters at all
             filters = {}
 
-        orm_filters = super(LocationResource, self).build_filters(filters)
+        orm_filters = super(MapaResource, self).build_filters(filters)
 
         if ('only_lasts' in filters):
             query = filters['only_lasts']
@@ -195,18 +201,10 @@ class LocationResource(ModelResource):
         excluded = []
         for position in filtered_positions:
             radious = haversine(float(position.longitude), float(position.latitude), long, lat)
-            print radious
-            print r
             if radious > r:
                 excluded.append(position.id)
-                #position.delete()
-                pass
 
-        pprint(excluded)
         filtered_positions = filtered_positions.exclude(id__in=excluded)
-        #pprint(filtered_positions)
-        #filtered_positions.filter(~Q(id__in=excluded))
-        pprint(filtered_positions)
         #Pagino con los resultados seleccionados
         paginator = Paginator(filtered_positions, 20)
 
@@ -228,7 +226,6 @@ class LocationResource(ModelResource):
         self.log_throttled_access(request)
         return self.create_response(request, object_list)
 
-
 class ClientLocationResource(ModelResource):
     class Meta:
         queryset = ClientLocation.objects.all()
@@ -246,16 +243,35 @@ class ClientResource(ModelResource):
         authorization = Authorization()
         always_return_data = True
 
+class NotificationAuthorization(Authorization):
+
+    def read_list(self, object_list, bundle):
+        return object_list.filter(taxi__user=bundle.request.user)
+
 
 class NotificationResource(ModelResource):
+    taxi = fields.ToOneField(TaxiResource, 'taxi', full=False)
+    client = fields.ToOneField(ClientResource, 'client', full=True)
+
+    class Meta:
+        queryset = Notification.objects.all()
+        authorization = NotificationAuthorization()
+        authentication = ApiKeyAuthentication()
+        allowed_methods = ['get', 'put']
+        resource_name = 'notificaciones'
+        filtering = {"status": ALL, "taxi":ALL_WITH_RELATIONS}
+
+
+class TravelResource(ModelResource):
     taxi = fields.ToOneField(TaxiResource, 'taxi', full=False)
     client = fields.ToOneField(ClientResource, 'client', full=False)
 
     class Meta:
         queryset = Notification.objects.all()
         authorization = Authorization()
-        allowed_methods = ['post', 'get']
-        #list_allowed_methods = ['post']
+        allowed_methods = ['post']
+        resource_name = 'travel'
+        filtering = {"status": ALL, }
 
 
 from math import radians, cos, sin, asin, sqrt

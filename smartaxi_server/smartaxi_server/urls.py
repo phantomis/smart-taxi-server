@@ -1,3 +1,4 @@
+from lib2to3.fixes.fix_methodattrs import MAP
 from django.contrib.auth.models import User
 from django.conf.urls import patterns, include, url
 from django.conf import settings
@@ -5,7 +6,7 @@ from django.db import models
 from django.contrib import admin
 from tastypie.models import create_api_key,ApiKey
 from tastypie.api import Api
-from geolocation.api import AccountResource, LocationResource, ClientResource, NotificationResource,TaxiResource, ApiTokenResource, PushResource
+from geolocation.api import *
 from geolocation import views
 from geolocation.models import Location, Client, Taxi, ClientLocation,Notification, send_notification
 from gcm.models import Device
@@ -31,6 +32,8 @@ v1_api.register(NotificationResource())
 v1_api.register(TaxiResource())
 v1_api.register(ApiTokenResource())
 v1_api.register(PushResource())
+v1_api.register(MapaResource())
+v1_api.register(TravelResource())
 
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

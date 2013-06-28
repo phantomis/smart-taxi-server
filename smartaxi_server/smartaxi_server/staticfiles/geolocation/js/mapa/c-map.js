@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
     var username = 'johndoe';
-    var api_key = 'b0d0e53a64b5ad7c358a2dc89a56175b26464682';
-    var header = { 'Authorization': 'ApiKey ' + username + ':' + api_key }
     var geocoder
     var mapaObject
     var markerClient
@@ -67,11 +65,10 @@ $(document).ready(function () {
         clearTable();
         $.ajax({
             type: 'GET',
-            url: "/api/v1/location/?only_lasts=true",
+            url: "/api/v1/mapa/?only_lasts=true",
             dataType: "json",
             processData: false,
             contentType: "application/json",
-            headers: header,
             success: function (result) {
                 if (result.objects) {
                     taxis = result.objects
@@ -282,7 +279,7 @@ $(document).ready(function () {
         console.log(parameters)
         $.ajax({
             type: 'GET',
-            url: '/api/v1/location/search/?format=json',
+            url: '/api/v1/mapa/search/?format=json',
             data: parameters,
             contentType: "application/json; charset=utf-8",
             success: function (data, textStatus, jqXHR) {
@@ -340,7 +337,7 @@ $(document).ready(function () {
         console.log(parameters)
         $.ajax({
             type: 'POST',
-            url: '/api/v1/notification/',
+            url: '/api/v1/travel/',
             data: parameters,
             dataType: 'json',
             processData: false,
