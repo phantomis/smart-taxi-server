@@ -74,7 +74,9 @@ def send_notification(sender, **kwargs):
                 if notif.status == "1":
                     notif.status = "2"
                     notif.save()
-                    notif.taxi.device.send_message(serializers.serialize("json", [notif]))
+                    print notif.taxi.device
+                    result = notif.taxi.device.send_message(serializers.serialize("json", [notif]))
+                    print result
 
         else:
             notif = kwargs.get("instance")
@@ -85,7 +87,8 @@ def send_notification(sender, **kwargs):
                 for notify_to_discard in to_notify:
                     #solo si fue un mensaje mandado y tiene asociado un dispositivo
                     if notify_to_discard.status == "2" and notify_to_discard.taxi.device:
-                        notify_to_discard.taxi.device.send_message("carrera ya tomada")
+                        result = notify_to_discard.taxi.device.send_message("carrera ya tomada")
+                        print result
                     notify_to_discard.delete()
                 #seteamos el taxi que respondio con un estado de "working"
                 notif.taxi.status = "4"

@@ -1,22 +1,36 @@
 $(document).ready(function () {
 
-    var username = 'johndoe';
     var geocoder
     var mapaObject
     var markerClient
     var circle
     var markersArray = [];
-
     var taxis = {}
 
-    var drawerId;
+    var taxiDrawerInterval;
 
+    var taxiStatus = {
+        "1": "Disponible",
+        "2": "No Disponible",
+        "3": "Ausente",
+        "4": "En Carrera"
+    }
+
+    $("#dialog").dialog({
+        modal: true,
+        dialogClass: "no-close",
+        autoOpen: false,
+        width: 400
+
+    });
 
     initialize();
     showTaxis();
-    drawerId = setInterval(function () {
+
+
+    taxiDrawerInterval = setInterval(function () {
         showTaxis()
-    }, 3000);
+    }, 50000);
 
     function initialize() {
         geocoder = new google.maps.Geocoder();
@@ -82,16 +96,48 @@ $(document).ready(function () {
     }
 
     function addTaxiToTable(location) {
-        var row = "<tr>" +
+
+        var s = location.user.taxi.status;
+        var rowClass = "class=' ";
+        if (s == "1") {
+            rowClass += "success";
+        } else if (s == "2") {
+            rowClass += "error";
+        } else if (s == "3") {
+            rowClass += "info";
+        } else if (s == "4") {
+            rowClass += "warning";
+        }
+
+        var taxiTime = new Date(location.timestamp);
+        var umbralTime = new Date(new Date().getTime() - 30*60000);
+        console.log(taxiTime)
+        console.log(umbralTime)
+
+        if(taxiTime < umbralTime){
+            rowClass += " isOld";
+        }
+
+        rowClass += "'";
+        var row = "<tr " + rowClass + ">" +
             "<td>" + location.user.taxi.id + "</td>" +
             "<td>" + location.user.taxi.license_plate + "</td>" +
-            "<td>" + location.user.taxi.status + "</td>" +
+            "<td>" + taxiStatus[location.user.taxi.status] + "</td>" +
             "</tr>";
         $('#taxis-table tbody').append(row);
     }
 
     function drawTaxi(value) {
-        var contentString = "<p>Titulo</p>" + '<p> Speed: ' + value.speed + '</p>';
+        console.log(value);
+        //var contentString = "<p>" + value.user.taxi.license_plate + "</p>" + '<p> Speed: ' + value.speed + '</p>';
+        var contentString =
+            "<p>" +
+                "<strong> Patente: </strong> " + value.user.taxi.license_plate + " <br/>  " +
+                "<strong> Velocidad: </strong>" + value.speed + " <br/> " +
+                "<strong> Ultima vez visto: </strong>" + jQuery.timeago(value.timestamp) + "<br/> " +
+                "<strong> Estado: </strong>" + taxiStatus[value.user.taxi.status] +
+                "</p> ";
+
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 100
@@ -105,7 +151,7 @@ $(document).ready(function () {
             icon: STATIC_URL + 'img/taxi_ico.png'
         });
         markersArray.push(marker);
-
+        //infowindow.open(mapaObject, marker);
         google.maps.event.addListener(marker, 'click', function () {
             infowindow.open(mapaObject, marker);
         });
@@ -205,6 +251,7 @@ $(document).ready(function () {
     //Eventos
 
     $("#send_location").on("click", function (event) {
+        clearInterval(taxiDrawerInterval);
         var lat = $("#client_address").attr("data-latitude");
         var lon = $("#client_address").attr("data-longitude");
         var userData = {
@@ -219,17 +266,21 @@ $(document).ready(function () {
 
         addUser(JSON.stringify(userData), {
             success: function (client) {
-                console.log(client)
-                $.each(taxis, function (index, taxi) {
 
-                    //console.log( " taxiId: " + taxi.id + " clientId: " + client.id)
-                    sendLocation(taxi.user.taxi.id, client.id);
+                $.each(taxis, function (index, taxi) {
+                    if (taxi.user.taxi.status == "1") {
+                        sendLocation(taxi.user.taxi.id, client.id);
+                    }
                 })
+                searchTravelAccepted(client.id)
+                $("#dialog").dialog("open");
             },
             error: function (textStatus) {
                 console.log(textStatus)
             }
         })
+
+
     });
 
     $("#search_location").on("click", function (event) {
@@ -237,16 +288,16 @@ $(document).ready(function () {
     });
 
     $("#get_near_taxis").on("click", function (event) {
-        clearInterval(drawerId)
+        clearInterval(taxiDrawerInterval)
 
         var lat = $("#client_address").attr("data-latitude");
         var lon = $("#client_address").attr("data-longitude");
         var r = $("#radious_map").val();
         drawCircle(lat, lon, r);
-        searchAndDrawNear(lat, lon,r);
+        searchAndDrawNear(lat, lon, r);
         mapaObject.fitBounds(circle.getBounds());
-        drawerId = setInterval(function(){
-            searchAndDrawNear(lat,lon,r);
+        taxiDrawerInterval = setInterval(function () {
+            searchAndDrawNear(lat, lon, r);
         }, 3000);
     });
 
@@ -349,6 +400,42 @@ $(document).ready(function () {
                 console.log(textStatus)
             }
         });
+    }
+
+    function searchTravelAccepted(idClient) {
+        clearOverlays();
+        clearTable();
+        var success = false;
+        $.ajax({
+            type: 'GET',
+            url: "/api/v1/travel/?client=" + idClient,
+            dataType: "json",
+            processData: false,
+            contentType: "application/json",
+            success: function (result) {
+                if (result.objects) {
+                    travels = result.objects
+                    $.each(travels, function (index, travel) {
+                        if (travel.status == "3") {
+                            $("#dialog").dialog("close");
+                            alert("Se agendó correctamente el viaje al taxi");
+                            resetAll();
+                            success = true;
+                            return;
+                        }
+                    })
+                    if (!success) {
+                        setTimeout(function () {
+                            searchTravelAccepted(idClient);
+                        }, 2000)
+                    }
+                }
+            }
+        });
+    }
+
+    function resetAll() {
+        document.location.reload(true);
     }
 
 });

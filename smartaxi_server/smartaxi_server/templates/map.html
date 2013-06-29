@@ -19,7 +19,13 @@
             width: auto;
             display: inline;
         }
+        .no-close .ui-dialog-titlebar-close {
+          display: none;
+        }
 
+        .isOld{
+            color: #cccccc;
+        }
     </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -33,6 +39,7 @@
     <link href="{% static  "geolocation/css/bootstrap.min.css" %}" rel="stylesheet">
     <link href="{% static  "geolocation/css/bootstrap-responsive.min.css" %}" rel="stylesheet">
     <link href="{% static  "geolocation/css/style.css" %}" rel="stylesheet">
+    <link href="{% static  "geolocation/css/ui-lightness/jquery-ui-1.10.3.custom.css" %}" rel="stylesheet">
 
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -43,7 +50,11 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script src="{% static  "geolocation/js/libs/jquery.js" %}"></script>
+
+
+    <script src="{% static  "geolocation/js/libs/jquery-1.9.1.js" %}"></script>
+    <script src="{% static  "geolocation/js/libs/jquery-ui-1.10.3.custom.min.js" %}"></script>
+    <script src="{% static  "geolocation/js/libs/jquery.timeago.js" %}"></script>
     <script type="text/javascript"
             src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBG48aUbx4ysaS6QbusZ84gdszuFlm8RTE&sensor=false">
     </script>
@@ -81,28 +92,51 @@
 </section>
 <div class="container">
     <div class="row-fluid">
-        <div class="span4">
-            <h3>Datos del cliente</h3>
+        <div class="span3">
+
 
             <div class="well">
-                <label>Nombre del cliente</label>
-                <input id="client_name" type="text" class="span12" placeholder="Rodrigo Amaro" value="Rodrigo Amaro">
-                <label>Numero de teléfono</label>
+                <h4>Datos del cliente</h4>
 
-                <div class="input-prepend">
-                    <span class="add-on">+56 9</span>
-                    <input id="client_phone" class="span12" type="text" placeholder="96593178">
+                <div class="inline">
+                    <label>Nombre del cliente</label>
+                    <input id="client_name" type="text" placeholder="Rodrigo Amaro" value="Rodrigo Amaro">
                 </div>
-                <label>Dirección de origen</label>
-                <input id="client_address" type="text" class="span12" placeholder="Alicante 116, Quilpue"
-                       value="Alicante 116, Quilpue">
+                <div class="inline">
+                    <label>Numero de teléfono</label>
+
+                    <div class="input-prepend">
+                        <span class="add-on">+56 9</span>
+                        <input id="client_phone" type="text" class="span10" placeholder="96593178">
+                    </div>
+                </div>
+
+
+                <div class="inline">
+                    <label>Dirección de origen</label>
+
+                    <div class="input-append">
+                        <input id="client_address" type="text" placeholder="Alicante 116, Quilpue"
+                               value="Alicante 116, Quilpue" class="span4">
+                        <button class="btn" id="search_location">Buscar en mapa</button>
+
+                    </div>
+
+                </div>
+
 
                 <div class="inline">
                     <label for="radious_map">Radio de cobertura</label>
-                    <input type="text" id="radious_map" value="5">
+
+                    <div class="input-append">
+                        <input type="text" id="radious_map" value="5" class="span2">
+                        <button class="btn" id="get_near_taxis" disabled="disabled">Buscar taxis cercanos</button>
+
+                    </div>
+
                 </div>
-                <button class="btn" id="search_location">Buscar en mapa</button>
-                <button class="btn" id="get_near_taxis" disabled="disabled">Buscar taxis cercanos</button>
+
+
                 <div id="location_box" style="display: none">
                     <strong>Quisiste decir: </strong>
 
@@ -111,8 +145,16 @@
                 </div>
             </div>
             <div class="well">
-                <p id="client_data"> </p>
+                <p id="client_data"></p>
             </div>
+
+
+            <div class="alert">
+                <button class="close" data-dismiss="alert">×</button>
+                <strong> Rayos!</strong> No se encuentran taxis disponibles.
+            </div>
+        </div>
+        <div class="span3">
             <div class="well">
                 <table id="taxis-table" class="table table-striped">
                     <thead>
@@ -130,16 +172,18 @@
                 </table>
                 <button class="btn" id="send_location">Notificar a vehiculos cercanos</button>
             </div>
-
-            <div class="alert">
-                <button class="close" data-dismiss="alert">×</button>
-                <strong> Rayos!</strong> No se encuentran taxis disponibles.
-            </div>
         </div>
+
         <!-- Google Maps Control -->
-        <div class="span8">
+        <div class="span6">
             <div id="map-canvas"></div>
         </div>
+
+        <div id="dialog" title="Esperando respuesta de un taxi">
+            <p>Espere mientras esperamos por el taxi...</p>
+        </div>
+
+
     </div>
 </div>
 </body>

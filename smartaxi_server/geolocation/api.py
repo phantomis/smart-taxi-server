@@ -269,9 +269,9 @@ class TravelResource(ModelResource):
     class Meta:
         queryset = Notification.objects.all()
         authorization = Authorization()
-        allowed_methods = ['post']
+        allowed_methods = ['post', 'get']
         resource_name = 'travel'
-        filtering = {"status": ALL, }
+        filtering = {"status": ALL, "client": ALL,}
 
 
 from math import radians, cos, sin, asin, sqrt

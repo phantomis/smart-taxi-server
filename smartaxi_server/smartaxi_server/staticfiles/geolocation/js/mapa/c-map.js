@@ -1,20 +1,20 @@
 $(document).ready(function () {
 
-    var username = 'johndoe';
     var geocoder
     var mapaObject
     var markerClient
     var circle
     var markersArray = [];
-
     var taxis = {}
 
-    var drawerId;
+    var taxiDrawerInterval;
 
 
     initialize();
     showTaxis();
-    drawerId = setInterval(function () {
+
+
+    taxiDrawerInterval = setInterval(function () {
         showTaxis()
     }, 3000);
 
@@ -91,6 +91,7 @@ $(document).ready(function () {
     }
 
     function drawTaxi(value) {
+        console.log(value);
         var contentString = "<p>Titulo</p>" + '<p> Speed: ' + value.speed + '</p>';
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
@@ -237,7 +238,7 @@ $(document).ready(function () {
     });
 
     $("#get_near_taxis").on("click", function (event) {
-        clearInterval(drawerId)
+        clearInterval(taxiDrawerInterval)
 
         var lat = $("#client_address").attr("data-latitude");
         var lon = $("#client_address").attr("data-longitude");
@@ -245,7 +246,7 @@ $(document).ready(function () {
         drawCircle(lat, lon, r);
         searchAndDrawNear(lat, lon,r);
         mapaObject.fitBounds(circle.getBounds());
-        drawerId = setInterval(function(){
+        taxiDrawerInterval = setInterval(function(){
             searchAndDrawNear(lat,lon,r);
         }, 3000);
     });
