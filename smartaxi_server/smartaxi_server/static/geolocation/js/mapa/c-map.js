@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     taxiDrawerInterval = setInterval(function () {
         showTaxis()
-    }, 50000);
+    }, 5000);
 
     function initialize() {
         geocoder = new google.maps.Geocoder();
@@ -110,9 +110,7 @@ $(document).ready(function () {
         }
 
         var taxiTime = new Date(location.timestamp);
-        var umbralTime = new Date(new Date().getTime() - 30*60000);
-        console.log(taxiTime)
-        console.log(umbralTime)
+        var umbralTime = new Date(new Date().getTime() - 9*30*60000);
 
         if(taxiTime < umbralTime){
             rowClass += " isOld";
@@ -128,7 +126,6 @@ $(document).ready(function () {
     }
 
     function drawTaxi(value) {
-        console.log(value);
         //var contentString = "<p>" + value.user.taxi.license_plate + "</p>" + '<p> Speed: ' + value.speed + '</p>';
         var contentString =
             "<p>" +
@@ -227,6 +224,7 @@ $(document).ready(function () {
 
     function disableSaveClient() {
         $("#get_near_taxis").attr("disabled", "disabled");
+        $("#send_location").attr("disabled", "disabled");
     }
 
     function addUser(userData, _fnCallback) {
@@ -299,6 +297,7 @@ $(document).ready(function () {
         taxiDrawerInterval = setInterval(function () {
             searchAndDrawNear(lat, lon, r);
         }, 3000);
+        $("#send_location").removeAttr("disabled");
     });
 
     function searchAndDrawNear(lat, lon, r) {
