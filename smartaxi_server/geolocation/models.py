@@ -17,7 +17,7 @@ class Taxi(models.Model):
     status = models.CharField(u'Status',max_length=2,choices=STATUS_CHOICES)
     device = models.OneToOneField(Device, blank=True, null=True)
     def __unicode__(self):
-        return "Taxi %s for user %s" % (self.license_plate,self.user)
+        return "taxi %s with driver %s" % (self.license_plate,self.user)
 
 
 class Location(models.Model):
@@ -60,7 +60,8 @@ class Notification(models.Model):
     status = models.CharField(u'Status',max_length=2,choices=STATUS_CHOICES, default='1')
 
     def __unicode__(self):
-        return u"  %s in %s ( %s ) " % ( self.client.name, self.taxi, self.status)
+        st  = {"1" : "CREATED", "2" : "SENDED", "3" : "RESPONDED", "4" : "REJECTED", }
+        return u"  client %s for %s ( status %s ) " % ( self.client.name, self.taxi, st[self.status])
 
 
 from django.core import serializers

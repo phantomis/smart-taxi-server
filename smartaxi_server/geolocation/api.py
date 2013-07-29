@@ -273,6 +273,10 @@ class TravelResource(ModelResource):
         resource_name = 'travel'
         filtering = {"status": ALL, "client": ALL,}
 
+    def dehydrate_client(self, bundle):
+        pprint(bundle.data)
+        return bundle.data['client']
+
 
 from math import radians, cos, sin, asin, sqrt
 
