@@ -14,10 +14,6 @@ framework.
 
 """
 
-import newrelic.agent
-
-newrelic.agent.initialize('../../newrelic.ini')
-
 import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "smartaxi_server.settings")
