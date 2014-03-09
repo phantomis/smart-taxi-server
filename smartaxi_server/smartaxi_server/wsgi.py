@@ -13,6 +13,11 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
+
+import newrelic.agent
+
+newrelic.agent.initialize('../../newrelic.ini')
+
 import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "smartaxi_server.settings")
