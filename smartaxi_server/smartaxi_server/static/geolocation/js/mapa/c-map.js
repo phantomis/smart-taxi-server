@@ -293,14 +293,14 @@ $(document).ready(function () {
     $("#get_near_taxis").on("click", function (event) {
         clearInterval(taxiDrawerInterval)
 
-        var lat = $("#client_address").attr("data-latitude");
-        var lon = $("#client_address").attr("data-longitude");
+        //var lat = $("#client_address").attr("data-latitude");
+        //var lon = $("#client_address").attr("data-longitude");
         var r = $("#radious_map").val();
-        drawCircle(lat, lon, r);
-        searchAndDrawNear(lat, lon, r);
+        drawCircle(general_latitude, general_longitude, r);
+        searchAndDrawNear(general_latitude, general_longitude, r);
         mapaObject.fitBounds(circle.getBounds());
         taxiDrawerInterval = setInterval(function () {
-            searchAndDrawNear(lat, lon, r);
+            searchAndDrawNear(general_latitude, general_longitude, r);
         }, 3000);
         $("#send_location").removeAttr("disabled");
     });
