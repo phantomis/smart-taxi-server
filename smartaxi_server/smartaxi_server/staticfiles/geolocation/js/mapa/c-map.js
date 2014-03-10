@@ -16,6 +16,9 @@ $(document).ready(function () {
         "4": "En Carrera"
     }
 
+    var general_latitude = ""
+    var general_longitude = ""
+
     $("#dialog").dialog({
         modal: true,
         dialogClass: "no-close",
@@ -202,8 +205,7 @@ $(document).ready(function () {
         });
     }
 
-    var general_latitude = ""
-    var general_longitude = ""
+
 
 
     function setAddress(address) {
@@ -297,7 +299,7 @@ $(document).ready(function () {
         //var lon = $("#client_address").attr("data-longitude");
         var r = $("#radious_map").val();
         drawCircle(general_latitude, general_longitude, r);
-        searchAndDrawNear(general_latitude, general_longitude, r);
+        general_latitude(general_latitude, general_longitude, r);
         mapaObject.fitBounds(circle.getBounds());
         taxiDrawerInterval = setInterval(function () {
             searchAndDrawNear(general_latitude, general_longitude, r);
