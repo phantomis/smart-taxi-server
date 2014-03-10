@@ -181,7 +181,7 @@ class MapaResource(ModelResource):
                 self.wrap_view('do_search'), name="api_search"),
         ]
 
-    #Example: http://127.0.0.1:8080/api/v1/location/search/?format=json&lat=-33.0465667&long=-71.417089&r=5
+    #Example: http://127.0.0.1:8080ecle
     def do_search(self, request, **kwargs):
 
         self.method_check(request, allowed=['get'])

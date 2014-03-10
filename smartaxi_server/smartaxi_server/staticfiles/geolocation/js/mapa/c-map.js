@@ -202,11 +202,16 @@ $(document).ready(function () {
         });
     }
 
+    var general_latitude = ""
+    var general_longitude = ""
+
+
     function setAddress(address) {
         $("#client_address").val(address.formatted_address)
             .attr("data-latitude", address.geometry.location.jb)
             .attr("data-longitude", address.geometry.location.kb);
-        ;
+        general_latitude = address.geometry.location.jb;
+        general_longitude = address.geometry.location.kb;
         mapaObject.setCenter(address.geometry.location);
         mapaObject.setZoom(15);
         markerClient.setPosition(address.geometry.location);
@@ -250,15 +255,15 @@ $(document).ready(function () {
 
     $("#send_location").on("click", function (event) {
         clearInterval(taxiDrawerInterval);
-        var lat = $("#client_address").attr("data-latitude");
-        var lon = $("#client_address").attr("data-longitude");
+        //var lat = $("#client_address").attr("data-latitude");
+        //var lon = $("#client_address").attr("data-longitude");
         var userData = {
             "name": $("#client_name").val(),
             "phone_number": $("#client_phone").val(),
             "location": {
                 "address_name": $("#client_address").val(),
-                "latitude": lat,
-                "longitude": lon
+                "latitude": general_latitude,
+                "longitude": general_longitude
             }
         }
 
