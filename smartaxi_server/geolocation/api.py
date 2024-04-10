@@ -45,6 +45,8 @@ class ApiTokenResource(ModelResource):
         bundle = self.alter_detail_data_to_serialize(request, bundle)
         return self.create_response(request, bundle)
 
+    def test_methon(self):
+        pass
 
 class AccountResource(ModelResource):
     taxi = fields.ToOneField('geolocation.api.TaxiResource', 'taxi', full=True, null=True)
